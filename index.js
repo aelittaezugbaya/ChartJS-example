@@ -18,8 +18,24 @@ form.addEventListener('submit', (event) => {
     let value = document.getElementById('value').value;
     console.log(spends +' '+ value);
     labelsC.push(spends);
-    values.push(value);
-    console.log(labelsC)
+    values.push(parseInt(value));
+    console.log(values);
+    let myChart = new Chart(ctx, {
+        type: 'pie',
+        data: {
+            labels: labelsC,
+            datasets: [{
+                label: '# of Votes',
+                data: values,
+                backgroundColor: colors,
+                borderColor: colors,
+                borderWidth: 1
+            }]
+        },
+        options: {
+            
+        }
+    });
     form.reset()
 
 })
