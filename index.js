@@ -12,6 +12,7 @@ let colors =[
 ];
 
 let form = document.getElementById('form');
+
 form.addEventListener('submit', (event) => {
     event.preventDefault();
     let spends = document.getElementById('spends').value;
@@ -36,9 +37,8 @@ form.addEventListener('submit', (event) => {
             
         }
     });
-    form.reset()
-
-})
+    form.reset();
+});
 let myChart = new Chart(ctx, {
     type: 'pie',
     data: {
@@ -49,7 +49,7 @@ let myChart = new Chart(ctx, {
             backgroundColor: colors,
             borderColor: colors,
             borderWidth: 1
-        }]
+        }],
     },
     options: {
         
